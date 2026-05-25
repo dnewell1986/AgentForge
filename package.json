@@ -1,0 +1,175 @@
+{
+  "name": "agentforge",
+  "displayName": "AgentForge",
+  "description": "Browse and install GitHub Copilot-compatible agents, skills, and instruction files from a community catalog.",
+  "version": "0.0.0",
+  "preview": true,
+  "publisher": "agentforge",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/agentforge/agentforge"
+  },
+  "engines": {
+    "vscode": "^1.90.0"
+  },
+  "categories": [
+    "AI",
+    "Other"
+  ],
+  "keywords": [
+    "copilot",
+    "agents",
+    "skills",
+    "instructions",
+    "marketplace"
+  ],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "agentforge",
+          "title": "AgentForge",
+          "icon": "media/agentforge.svg"
+        }
+      ]
+    },
+    "views": {
+      "agentforge": [
+        {
+          "id": "agentforge.agents",
+          "name": "Agents",
+          "contextualTitle": "AgentForge"
+        },
+        {
+          "id": "agentforge.skills",
+          "name": "Skills",
+          "contextualTitle": "AgentForge"
+        },
+        {
+          "id": "agentforge.instructions",
+          "name": "Instructions",
+          "contextualTitle": "AgentForge"
+        }
+      ]
+    },
+    "commands": [
+      {
+        "command": "agentforge.refreshCatalog",
+        "title": "Refresh Catalog",
+        "icon": "$(refresh)",
+        "category": "AgentForge"
+      },
+      {
+        "command": "agentforge.search",
+        "title": "Search Catalog",
+        "icon": "$(search)",
+        "category": "AgentForge"
+      },
+      {
+        "command": "agentforge.installPackage",
+        "title": "Install",
+        "icon": "$(cloud-download)",
+        "category": "AgentForge"
+      },
+      {
+        "command": "agentforge.uninstallPackage",
+        "title": "Uninstall",
+        "icon": "$(trash)",
+        "category": "AgentForge"
+      },
+      {
+        "command": "agentforge.showDetails",
+        "title": "Show Details",
+        "icon": "$(info)",
+        "category": "AgentForge"
+      },
+      {
+        "command": "agentforge.setGitHubToken",
+        "title": "Set GitHub Token",
+        "icon": "$(key)",
+        "category": "AgentForge"
+      }
+    ],
+    "menus": {
+      "view/title": [
+        {
+          "command": "agentforge.refreshCatalog",
+          "when": "view == agentforge.agents || view == agentforge.skills || view == agentforge.instructions",
+          "group": "navigation"
+        },
+        {
+          "command": "agentforge.search",
+          "when": "view == agentforge.agents || view == agentforge.skills || view == agentforge.instructions",
+          "group": "navigation"
+        }
+      ],
+      "view/item/context": [
+        {
+          "command": "agentforge.installPackage",
+          "when": "viewItem == package-available",
+          "group": "inline"
+        },
+        {
+          "command": "agentforge.installPackage",
+          "when": "viewItem == package-update",
+          "group": "inline"
+        },
+        {
+          "command": "agentforge.uninstallPackage",
+          "when": "viewItem == package-installed || viewItem == package-update",
+          "group": "inline"
+        },
+        {
+          "command": "agentforge.showDetails",
+          "when": "viewItem == package-available || viewItem == package-installed || viewItem == package-update",
+          "group": "inline"
+        }
+      ]
+    },
+    "configuration": {
+      "title": "AgentForge",
+      "properties": {
+        "agentforge.catalogUrl": {
+          "type": "string",
+          "default": "https://raw.githubusercontent.com/agentforge/agentforge/main/catalog/catalog.json",
+          "description": "URL to a catalog.json file. Defaults to the AgentForge community catalog hosted in this repository. Point this to any publicly accessible raw JSON URL to use a custom catalog."
+        },
+        "agentforge.cacheTtlMinutes": {
+          "type": "number",
+          "default": 60,
+          "minimum": 1,
+          "description": "How long (in minutes) to cache the catalog before refreshing."
+        },
+        "agentforge.debug": {
+          "type": "boolean",
+          "default": false,
+          "description": "Enable verbose debug logging in the AgentForge output channel."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "lint": "eslint \"src/**/*.ts\"",
+    "test": "jest",
+    "package": "vsce package --no-dependencies"
+  },
+  "devDependencies": {
+    "@types/jest": "^30.0.0",
+    "@types/node": "^20.0.0",
+    "@types/vscode": "^1.90.0",
+    "@typescript-eslint/eslint-plugin": "^8.0.0",
+    "@typescript-eslint/parser": "^8.0.0",
+    "@vscode/test-electron": "^2.4.0",
+    "@vscode/vsce": "^3.9.1",
+    "eslint": "^9.0.0",
+    "jest": "^29.0.0",
+    "ts-jest": "^29.0.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.0"
+  }
+}

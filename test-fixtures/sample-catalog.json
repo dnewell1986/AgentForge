@@ -1,0 +1,68 @@
+{
+  "agents": [
+    {
+      "id": "solution-architect",
+      "name": "Solution Architect",
+      "description": "An expert solution architect specialising in replatforming, strangler fig migrations, and producing C4 diagrams and Architecture Decision Records.",
+      "author": "agentforge",
+      "version": "1.0.0",
+      "tags": ["architecture", "migration", "c4", "adr"],
+      "installPath": ".github/agents",
+      "files": [
+        "agents/solution-architect/agent.md"
+      ]
+    },
+    {
+      "id": "dotnet-engineer",
+      "name": ".NET Enterprise Engineer",
+      "description": "Builds, reviews, and designs .NET/C# applications — enterprise services, Kafka consumers, domain modelling, DI wiring, and API design.",
+      "author": "agentforge",
+      "version": "1.0.0",
+      "tags": ["dotnet", "csharp", "kafka", "enterprise"],
+      "installPath": ".github/agents",
+      "files": [
+        "agents/dotnet-engineer/agent.md"
+      ]
+    }
+  ],
+  "skills": [
+    {
+      "id": "api-design-review",
+      "name": "API Design Review",
+      "description": "Evaluates a codebase against the platform API Design Standard covering resource naming, HTTP methods, error handling, pagination, versioning, and OpenAPI documentation.",
+      "author": "agentforge",
+      "version": "1.0.0",
+      "tags": ["api", "rest", "openapi", "review"],
+      "installPath": ".copilot/skills/api-design-review",
+      "files": [
+        "skills/api-design-review/SKILL.md"
+      ]
+    },
+    {
+      "id": "project-setup",
+      "name": "Project Setup",
+      "description": "Comprehensive setup steps to scaffold complete project structures including TypeScript projects, React apps, Node.js servers, and MCP servers.",
+      "author": "agentforge",
+      "version": "1.0.0",
+      "tags": ["scaffold", "setup", "typescript", "react"],
+      "installPath": ".copilot/skills/project-setup",
+      "files": [
+        "skills/project-setup/SKILL.md"
+      ]
+    }
+  ],
+  "instructions": [
+    {
+      "id": "dotnet-sonar",
+      "name": ".NET SonarC# Standards",
+      "description": "Enforces SonarC# (Sonar Way) coding standards: naming conventions, complexity limits, null safety, exception handling, async patterns, and code hygiene.",
+      "author": "agentforge",
+      "version": "1.0.0",
+      "tags": ["dotnet", "csharp", "sonar", "quality"],
+      "installPath": ".github/instructions",
+      "files": [
+        "instructions/dotnet-sonar/dotnet-sonar.instructions.md"
+      ]
+    }
+  ]
+}

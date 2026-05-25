@@ -1,0 +1,68 @@
+{
+  "agents": [
+    {
+      "id": "solution-architect",
+      "name": "Solution Architect",
+      "description": "Experienced solution architect specialising in replatforming existing applications, designing integrations after mergers and acquisitions, applying the strangler fig pattern, and producing Architecture Decision Records and C4 diagrams.",
+      "author": "agentforge",
+      "version": "1.0.0",
+      "tags": ["architecture", "migration", "c4", "adr", "strangler-fig"],
+      "installPath": ".github/agents/solution-architect",
+      "files": [
+        "agents/solution-architect/agent.md"
+      ]
+    },
+    {
+      "id": "dotnet-enterprise-engineer",
+      "name": ".NET Enterprise Engineer",
+      "description": "Expert .NET/C# engineer. Builds, reviews, and designs enterprise services, distributed systems, Kafka consumers/producers, domain models, DI wiring, and APIs. Favours the simplest correct solution over clever engineering.",
+      "author": "agentforge",
+      "version": "1.0.0",
+      "tags": ["dotnet", "csharp", "kafka", "enterprise", "solid"],
+      "installPath": ".github/agents/dotnet-enterprise-engineer",
+      "files": [
+        "agents/dotnet-enterprise-engineer/agent.md"
+      ]
+    }
+  ],
+  "skills": [
+    {
+      "id": "api-design-review",
+      "name": "API Design Review",
+      "description": "Evaluates a codebase against the platform API Design Standard. Covers resource naming, HTTP methods, request/response format, error handling, status codes, pagination, versioning, OpenAPI documentation, security, and performance requirements.",
+      "author": "agentforge",
+      "version": "1.0.0",
+      "tags": ["api", "rest", "openapi", "review", "compliance"],
+      "installPath": ".github/skills/api-design-review",
+      "files": [
+        "skills/api-design-review/SKILL.md"
+      ]
+    }
+  ],
+  "instructions": [
+    {
+      "id": "dotnet-sonar",
+      "name": ".NET SonarC# Standards",
+      "description": "Enforces SonarC# (Sonar Way) coding standards for C#: naming conventions, complexity limits, null safety, exception handling, async patterns, and general code hygiene. Apply to all .cs files.",
+      "author": "agentforge",
+      "version": "1.0.0",
+      "tags": ["dotnet", "csharp", "sonar", "quality", "standards"],
+      "installPath": ".github/instructions",
+      "files": [
+        "instructions/dotnet-sonar/dotnet-sonar.instructions.md"
+      ]
+    },
+    {
+      "id": "dotnet-enterprise",
+      "name": ".NET Enterprise Service Standards",
+      "description": "Standards for .NET enterprise services covering dependency injection patterns, BackgroundService workers, Kafka consumers, async correctness, SOLID applied to composition roots, and distributed systems guards.",
+      "author": "agentforge",
+      "version": "1.0.0",
+      "tags": ["dotnet", "csharp", "enterprise", "kafka", "backgroundservice"],
+      "installPath": ".github/instructions",
+      "files": [
+        "instructions/dotnet-enterprise/dotnet-enterprise.instructions.md"
+      ]
+    }
+  ]
+}
