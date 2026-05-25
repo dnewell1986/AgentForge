@@ -2,7 +2,7 @@
   "name": "agentforge",
   "displayName": "AgentForge",
   "description": "Browse and install GitHub Copilot-compatible agents, skills, and instruction files from a community catalog.",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "preview": true,
   "publisher": "agentforge",
   "repository": {
