@@ -33,7 +33,7 @@
       "author": "agentforge",
       "version": "1.0.0",
       "tags": ["api", "rest", "openapi", "review", "compliance"],
-      "installPath": ".copilot/skills/api-design-review",
+      "installPath": ".github/skills/api-design-review",
       "files": [
         "skills/api-design-review/SKILL.md"
       ]
@@ -45,7 +45,7 @@
       "author": "agentforge",
       "version": "1.0.0",
       "tags": ["scaffold", "setup", "typescript", "react", "nodejs"],
-      "installPath": ".copilot/skills/project-setup",
+      "installPath": ".github/skills/project-setup",
       "files": [
         "skills/project-setup/SKILL.md"
       ]

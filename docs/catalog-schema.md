@@ -47,7 +47,7 @@ Each file is installed at `{workspaceRoot}/{installPath}/{basename}`.
 | Category | Recommended installPath |
 |---|---|
 | Agent | `.github/agents/{agent-id}` |
-| Skill | `.copilot/skills/{skill-id}` |
+| Skill | `.github/skills/{skill-id}` |
 | Instruction | `.github/instructions` |
 
 ## Example entry
