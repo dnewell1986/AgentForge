@@ -1,4 +1,35 @@
+# Files/folders excluded from the VSIX package
+
+# Dev tooling and config
+.vscode/
 .vscode-test/
-out/
+.github/
+.gitignore
+.gitattributes
+eslint.config*
+jest.config*
+tsconfig*.json
+release-please-config.json
+.release-please-manifest.json
+
+# Source TypeScript (compiled output in out/ is included)
+src/
+
+# Tests and fixtures
+out/**/__tests__/
+out/**/__mocks__/
+test-fixtures/
+**/*.test.js
+
+# Dependencies and build outputs not for distribution
 node_modules/
+out/**/*.js.map
 *.vsix
+
+# Catalog lives on GitHub; the extension fetches it at runtime
+catalog/
+
+# Docs (not needed at runtime)
+docs/
+CONTRIBUTING.md
+CODE_OF_CONDUCT.md

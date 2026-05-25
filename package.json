@@ -5,6 +5,10 @@
   "version": "0.1.0",
   "preview": true,
   "publisher": "agentforge",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/agentforge/agentforge"
+  },
   "engines": {
     "vscode": "^1.90.0"
   },
@@ -151,7 +155,8 @@
     "compile": "tsc -p ./",
     "watch": "tsc -watch -p ./",
     "lint": "eslint src --ext ts",
-    "test": "jest"
+    "test": "jest",
+    "package": "vsce package --no-dependencies"
   },
   "devDependencies": {
     "@types/jest": "^30.0.0",
@@ -160,6 +165,7 @@
     "@typescript-eslint/eslint-plugin": "^8.0.0",
     "@typescript-eslint/parser": "^8.0.0",
     "@vscode/test-electron": "^2.4.0",
+    "@vscode/vsce": "^3.9.1",
     "eslint": "^9.0.0",
     "jest": "^29.0.0",
     "ts-jest": "^29.0.0",
