@@ -37,18 +37,6 @@
       "files": [
         "skills/api-design-review/SKILL.md"
       ]
-    },
-    {
-      "id": "project-setup",
-      "name": "Project Setup",
-      "description": "Comprehensive setup steps to scaffold complete project structures — TypeScript projects, React apps, Node.js servers, VS Code extensions, and MCP servers. Designed for full project initialisation, not individual files.",
-      "author": "agentforge",
-      "version": "1.0.0",
-      "tags": ["scaffold", "setup", "typescript", "react", "nodejs"],
-      "installPath": ".github/skills/project-setup",
-      "files": [
-        "skills/project-setup/SKILL.md"
-      ]
     }
   ],
   "instructions": [
